@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X | O | X </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
+
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/overlays.css">
+    <link rel="stylesheet" href="/styles/game_Config.css">
+    <link rel="stylesheet" href="/styles/game-field.css">
+
+ 
+    <script src="/Scripts/config.js" defer></script>
+    <script src="/Scripts/game.js" defer></script>
+    <script src="/Scripts/app.js" defer></script>
+</head>
+<body>
+    <div id="backdrop"></div>
+    <header>
+        <h1>It's time for a little Tic Tac Toe</h1>
+        <h3>❌|⭕|❌</h3>
+    </header>
+    <aside class="modal">
+        <h2>What is your name ?</h2>
+        <form>
+            <div class="form-control">
+                <label for="name">Player name</label>
+                <input type="text" name="playerName" id="name">
+            </div>
+            <p class="config-err">
+
+            </p>
+            <div>
+                <button type="submit" class="general-button">Confirm</button>
+                <button type="reset" class="general-button" id="cancel-btn">Cancel</button>
+            </div>
+        </form>
+    </aside>
+    <main>
+        <section id="game-config">
+            <ol>
+                <li id="player-1-data">
+                    <h2>Player 1</h2>
+                    <h3>Player Name</h3>
+                    <span class="material-symbols-outlined">
+                        close
+                        </span>
+                    <button  class="general-button" id="edit-player1_btn" data-playerid="1">Edit</button>
+                </li>
+                <li id="player-2-data">
+                    <h2>Player 2</h2>
+                    <h3>Player Name</h3>
+                    <span class="material-symbols-outlined">
+                        radio_button_unchecked
+                        </span>
+                    <button  class="general-button" id="edit-player2_btn" data-playerid="2">Edit</button>
+                </li>
+              
+            </ol>
+            <button class="general-button" id="start-btn">Start !</button>
+        </section>
+        <section id="game-field">
+            <article>
+                <h3><span id="winner-name">playerName</span> You won 👏 </h3>
+                <p>After <strong>10seconds</strong>
+                    the new game will start</p>
+                    <progress value="0" max="10" id="progressBar"></progress>
+            </article>
+
+            <p>Player 
+                <span id="active-player">Player name</span>
+                It is your turn Good luck
+            </p>
+            <ol id="game-board">
+                <li data-col="1" data-row="1"></li>
+                <li data-col="2" data-row="1"></li>
+                <li data-col="3" data-row="1"></li>
+
+                <li data-col="1" data-row="2"></li>
+                <li data-col="2" data-row="2"></li>
+                <li data-col="3" data-row="2"></li>
+
+                <li data-col="1" data-row="3"></li>
+                <li data-col="2" data-row="3"></li>
+                <li data-col="3" data-row="3"></li>
+            </ol>
+          
+        </section>
+    </main>
+</body>
+</html>

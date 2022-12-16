@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+    color: rgb(44, 41, 44);
+    background: rgb(247,239,247);
+}
+
+header{
+    background: rgb(140 , 0 ,255);
+    color: white;
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+
+.general-button{
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    background: rgb(140 , 0 ,255);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.general-button:hover{
+    background: rgb(54, 7, 93);
+    transform: scale(1.1);
+}
